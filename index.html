@@ -14,55 +14,10 @@ body {
     background: #f6f4f1;
     color: #1c1c1c;
     line-height: 1.6;
-    overflow-x: hidden;
+    position: relative;
 }
 
-a { text-decoration: none; color: #111; font-weight: 600; }
-a:hover { opacity: 0.7; }
-
-.container { max-width: 900px; margin: 0 auto; padding: 50px 25px; position: relative; z-index:2; }
-
-h1, h2, h3 { font-family: 'Playfair Display', serif; color: #111; margin-bottom: 15px; }
-h1 { font-size: 72px; margin-top: 20px; }
-h2 { font-size: 32px; margin-top: 50px; }
-h3 { font-size: 24px; margin-top: 40px; }
-
-p, li { font-size: 17px; opacity: 0.9; text-align:center; }
-ul { padding-left: 20px; margin-top: 5px; }
-
-.section { margin-bottom: 60px; position:relative; }
-
-.gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 15px; margin-top: 20px; }
-.gallery img { width: 100%; border-radius: 6px; object-fit: cover; filter: grayscale(15%) contrast(1.05); transition: transform 0.6s ease, box-shadow 0.6s ease; }
-.gallery img:hover { transform: scale(1.05); box-shadow: 0 20px 40px rgba(0,0,0,0.15); }
-
-.navbar { display: flex; justify-content: center; gap: 30px; margin-bottom: 50px; font-weight: 600; }
-.navbar a { text-transform: uppercase; font-size: 14px; letter-spacing: 1px; }
-
-.footer { text-align: center; opacity: 0.6; font-size: 14px; margin-top: 60px; }
-.contact-block { margin-top: 40px; padding: 20px 30px; border: 1px solid #d8d5d1; border-radius: 8px; background: #faf9f7; }
-
-/* ---------- CINEMATIC ANIMATIONS ---------- */
-.fade-in {
-    opacity: 0;
-    transform: translateY(40px);
-    transition: all 1s ease-out;
-}
-
-.fade-in.visible {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-img.fade-in {
-    transform: scale(0.95);
-}
-
-img.fade-in.visible {
-    transform: scale(1);
-}
-
-/* ---------- SOFT GRAIN OVERLAY ---------- */
+/* Grain overlay */
 body::after {
     content: "";
     position: fixed;
@@ -71,25 +26,77 @@ body::after {
     width:100%;
     height:100%;
     pointer-events:none;
-    background: url('images/grain.png'); /* voeg je soft grain texture toe */
+    background: url('images/grain.png');
     opacity: 0.05;
-    z-index:1;
+    z-index: 1;
 }
 
-/* ---------- HOME SPECIFIC ---------- */
-#home h1, #home p {
-    opacity:0;
+a { text-decoration: none; color: #111; font-weight: 600; }
+a:hover { opacity: 0.7; }
+
+.container { max-width: 900px; margin: 0 auto; padding: 50px 25px; position: relative; z-index:2; }
+
+h1, h2, h3 { font-family: 'Playfair Display', serif; color: #111; margin-bottom: 15px; text-align: center; }
+h1 { font-size: 72px; margin-top: 20px; }
+h2 { font-size: 32px; margin-top: 50px; }
+h3 { font-size: 24px; margin-top: 40px; }
+
+p, li { font-size: 17px; opacity: 0.9; text-align: center; }
+ul { padding-left: 20px; margin-top: 5px; list-style:none; }
+
+.section { margin-bottom: 60px; opacity: 0; transform: translateY(30px); transition: all 1s ease; }
+
+.section.visible { opacity: 1; transform: translateY(0); }
+
+.gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 15px; margin-top: 20px; }
+.gallery img { width: 100%; border-radius: 6px; object-fit: cover; filter: grayscale(15%) contrast(1.05); }
+
+.navbar { display: flex; justify-content: center; gap: 30px; margin-bottom: 50px; font-weight: 600; position: relative; z-index:2; }
+.navbar a { text-transform: uppercase; font-size: 14px; letter-spacing: 1px; }
+
+.footer { text-align: center; opacity: 0.6; font-size: 14px; margin-top: 60px; }
+.contact-block { margin-top: 40px; padding: 20px 30px; border: 1px solid #d8d5d1; border-radius: 8px; background: #faf9f7; }
+
+/* Home specific */
+.home-header {
+    margin-bottom:20px;
 }
-#home h1 { font-size:64px; letter-spacing:2px; }
-#home p { font-size:18px; margin-top:10px; letter-spacing:2px; }
+.home-header h1 {
+    font-size: 48px;
+    margin:0;
+    letter-spacing:1px;
+}
+.home-header p {
+    font-size:18px;
+    margin:10px 0 0;
+    opacity:0.8;
+    letter-spacing:2px;
+}
+.home-line {
+    width:60px;
+    height:2px;
+    background:#111;
+    margin:15px auto 0;
+    opacity:0.5;
+}
 
-/* ---------- ABOUT PAGE ---------- */
-#about h2 { text-align:center; }
-#about .about-content { display:flex; gap:20px; flex-wrap:wrap; justify-content:center; align-items:center; text-align:center; }
-#about .about-content p { max-width:600px; }
-#about .about-content img { width:200px; border-radius:6px; flex-shrink:0; transition: transform 0.6s ease; }
-#about .about-content img:hover { transform: scale(1.05); }
-
+/* About specific */
+.about-content {
+    display:flex; 
+    gap:20px; 
+    align-items:flex-start; 
+    justify-content:center; 
+    flex-wrap:wrap;
+}
+.about-content p {
+    max-width:600px; 
+    text-align:center;
+}
+.about-content img {
+    width:200px; 
+    border-radius:6px; 
+    flex-shrink:0;
+}
 </style>
 </head>
 <body>
@@ -97,7 +104,7 @@ body::after {
 <div class="container">
 
     <!-- NAVBAR -->
-    <div class="navbar fade-in">
+    <div class="navbar">
         <a href="#home">Home</a>
         <a href="#sound">Sound</a>
         <a href="#picture">Picture</a>
@@ -107,59 +114,59 @@ body::after {
     </div>
 
     <!-- HOME -->
-    <div id="home" class="section">
-        <div class="fade-in" style="margin-bottom:40px;">
+    <div id="home" class="section" style="padding:60px 20px 40px;">
+        <div class="home-header">
             <h1>VanVeenIdentity</h1>
             <p><strong>Sound · Picture · Space</strong></p>
+            <div class="home-line"></div>
         </div>
-
-        <p class="fade-in" style="max-width:700px; margin:0 auto 30px; line-height:1.6;">
+        <p style="max-width:700px; margin:0 auto 30px; line-height:1.6;">
             Crafting signature musical experiences that elevate artists, brands, and projects. Enhanced with 
             visuals, spatial design, and bespoke creations for a fully immersive identity.
         </p>
-
-        <img src="images/ampex.jpg" class="fade-in" style="width:100%; border-radius:6px; margin-top:25px;">
-        <hr style="width:60px; border:1px solid #111; margin:20px auto 0; opacity:0;" class="fade-in" id="home-line">
+        <img src="images/ampex.jpg" style="width:100%; border-radius:6px; margin-top:25px;">
     </div>
 
     <!-- SOUND -->
-    <div id="sound" class="section fade-in">
+    <div id="sound" class="section">
         <h2>Sound</h2>
         <p>Crafted to bring any vision to life, with rich, upscale timbres and balanced clarity. 
             Specializing in lo-fi and jazzy tracks that melt into the background or set the perfect boutique atmosphere. Ideal for media, branding, or immersive experiences.
         </p>
         <ul>
-            <li><iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/2vjNAxkUvIrgCDyXtBD9fy?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe></li>
-            <li><iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/1F8ubL4H0e4SNAZmH45jaf?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe></li>
+            <li><iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/2vjNAxkUvIrgCDyXtBD9fy?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe></li>
+            <li><iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/1F8ubL4H0e4SNAZmH45jaf?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe></li>
         </ul>
     </div>
 
     <!-- PICTURE -->
-    <div id="picture" class="section fade-in">
+    <div id="picture" class="section">
         <h2>Picture</h2>
         <p>Capturing the essence of the creative process, from intimate studio moments to polished product and interior photography. 
-            Combining documentary storytelling with an artistic eye to produce images that feel authentic, atmospheric, and visually striking.</p>
+            Combining documentary storytelling with an artistic eye to produce images that feel authentic, atmospheric, and visually striking.
+        </p>
         <div class="gallery">
-            <img src="images/desk.jpg" class="fade-in">
-            <img src="images/gibson.jpg" class="fade-in">
+            <img src="images/desk.jpg">
+            <img src="images/gibson.jpg">
         </div>
     </div>
 
     <!-- SPACE -->
-    <div id="space" class="section fade-in">
+    <div id="space" class="section">
         <h2>Space</h2>
         <p>Bespoke solutions for functional and inspiring environments—pedalboards from reclaimed wood, custom acoustic panels, interior pillars, or complete studio builds. 
-            High-end materials like sheepswool ensure superior quality and acoustics, creating spaces that feel intentional, comfortable, and refined.</p>
+            High-end materials like sheepswool ensure superior quality and acoustics, creating spaces that feel intentional, comfortable, and refined.
+        </p>
         <div class="gallery">
-            <img src="images/vase.jpg" class="fade-in">
-            <img src="images/pedal.jpg" class="fade-in">
+            <img src="images/vase.jpg">
+            <img src="images/pedal.jpg">
         </div>
     </div>
 
     <!-- ABOUT -->
-    <div id="about" class="section fade-in">
+    <div id="about" class="section">
         <h2>About</h2>
-        <div class="about-content fade-in">
+        <div class="about-content">
             <p>
                 Tim van Veen is a sonic and visual storyteller based in Amsterdam, 
                 blending music, photography, and spatial design to craft cinematic atmospheres for boutique brands 
@@ -171,34 +178,32 @@ body::after {
         </div>
     </div>
 
-</div>
+    <!-- CONTACT -->
+    <div id="contact" class="section contact-block">
+        <h2>Contact</h2>
+        <p><strong>Tim van Veen</strong><br>
+        Creative Director & Producer<br>
+        Amsterdam, NL<br>
+        <a href="mailto:contact@vanveenidentity.com">contact@vanveenidentity.com</a></p>
+    </div>
 
-<!-- CONTACT -->
-<div id="contact" class="section contact-block fade-in">
-    <h2>Contact</h2>
-    <p><strong>Tim van Veen</strong><br>
-    Creative Director & Producer<br>
-    Amsterdam, NL<br>
-    <a href="mailto:contact@vanveenidentity.com">contact@vanveenidentity.com</a></p>
-</div>
+    <p class="footer">© 2025 VanVeenIdentity — Sound · Picture · Space</p>
 
-<p class="footer fade-in">© 2025 VanVeenIdentity — Sound · Picture · Space</p>
+</div>
 
 <script>
-// ---------- FADE IN ON SCROLL ----------
-const faders = document.querySelectorAll('.fade-in');
-const appearOptions = { threshold: 0.15, rootMargin: "0px 0px -50px 0px" };
-const appearOnScroll = new IntersectionObserver(function(entries, observer){
-    entries.forEach(entry => {
-        if(!entry.isIntersecting) return;
-        entry.target.classList.add('visible');
-        observer.unobserve(entry.target);
-    });
-}, appearOptions);
+// Fade-in on scroll
+const sections = document.querySelectorAll('.section');
 
-faders.forEach(fader => {
-    appearOnScroll.observe(fader);
-});
+const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        if(entry.isIntersecting){
+            entry.target.classList.add('visible');
+        }
+    });
+}, {threshold:0.1});
+
+sections.forEach(section => observer.observe(section));
 </script>
 
 </body>
