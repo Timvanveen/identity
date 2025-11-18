@@ -60,6 +60,13 @@ ul { padding-left: 20px; margin-top: 5px; list-style:none; }
 /* Home specific */
 .home-header {
     margin-bottom:20px;
+    opacity:0;
+    transform: translateY(20px);
+    transition: all 1.2s ease;
+}
+.home-header.visible {
+    opacity:1;
+    transform: translateY(0);
 }
 .home-header h1 {
     font-size: 48px;
@@ -78,6 +85,19 @@ ul { padding-left: 20px; margin-top: 5px; list-style:none; }
     background:#111;
     margin:15px auto 0;
     opacity:0.5;
+    transition: all 1.2s ease;
+}
+.home-line.visible {
+    opacity:0.8;
+    transform: scaleX(1.1);
+}
+.home-image {
+    width:100%; 
+    border-radius:6px; 
+    margin-top:25px; 
+    transform: scale(0.97) translateY(0);
+    opacity: 0;
+    transition: all 1.5s ease;
 }
 
 /* About specific */
@@ -124,7 +144,7 @@ ul { padding-left: 20px; margin-top: 5px; list-style:none; }
             Crafting signature musical experiences that elevate artists, brands, and projects. Enhanced with 
             visuals, spatial design, and bespoke creations for a fully immersive identity.
         </p>
-        <img src="images/ampex.jpg" style="width:100%; border-radius:6px; margin-top:25px;">
+        <img src="images/ampex.jpg" class="home-image">
     </div>
 
     <!-- SOUND -->
@@ -194,7 +214,6 @@ ul { padding-left: 20px; margin-top: 5px; list-style:none; }
 <script>
 // Fade-in on scroll
 const sections = document.querySelectorAll('.section');
-
 const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
         if(entry.isIntersecting){
@@ -204,6 +223,27 @@ const observer = new IntersectionObserver(entries => {
 }, {threshold:0.1});
 
 sections.forEach(section => observer.observe(section));
+
+// Home header and line animation
+const homeHeader = document.querySelector('.home-header');
+const homeLine = document.querySelector('.home-line');
+window.addEventListener('load', () => {
+    homeHeader.classList.add('visible');
+    homeLine.classList.add('visible');
+});
+
+// Home image animation & parallax
+const homeImage = document.querySelector('.home-image');
+window.addEventListener('load', () => {
+    homeImage.style.opacity = 1;
+    homeImage.style.transform = 'scale(1) translateY(0)';
+});
+window.addEventListener('scroll', () => {
+    const scrolled = window.scrollY;
+    homeImage.style.transform = `scale(1) translateY(${scrolled * 0.1}px)`;
+    // subtle line glow effect while scrolling
+    homeLine.style.opacity = 0.8 + scrolled*0.0005;
+});
 </script>
 
 </body>
