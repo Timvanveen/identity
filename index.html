@@ -1,1 +1,132 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VanVeenIdentity — Sound, Picture & Space</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet">
+<style>
+/* ---------- GLOBAL ---------- */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+    background: #f6f4f1;
+    color: #1c1c1c;
+    line-height: 1.6;
+}
+a { text-decoration: none; color: #111; font-weight: 600; }
+a:hover { opacity: 0.7; }
+
+.container { max-width: 900px; margin: 0 auto; padding: 50px 25px; }
+
+h1, h2, h3 { font-family: 'Playfair Display', serif; color: #111; margin-bottom: 15px; }
+h1 { font-size: 48px; margin-top: 20px; }
+h2 { font-size: 32px; margin-top: 50px; }
+h3 { font-size: 24px; margin-top: 40px; }
+
+p, li { font-size: 17px; opacity: 0.9; }
+ul { padding-left: 20px; margin-top: 5px; }
+
+.section { margin-bottom: 60px; }
+
+.gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 15px; margin-top: 20px; }
+.gallery img { width: 100%; border-radius: 6px; object-fit: cover; filter: grayscale(15%) contrast(1.05); }
+
+.navbar { display: flex; justify-content: center; gap: 30px; margin-bottom: 50px; font-weight: 600; }
+.navbar a { text-transform: uppercase; font-size: 14px; letter-spacing: 1px; }
+
+.footer { text-align: center; opacity: 0.6; font-size: 14px; margin-top: 60px; }
+.contact-block { margin-top: 40px; padding: 20px 30px; border: 1px solid #d8d5d1; border-radius: 8px; background: #faf9f7; }
+
+</style>
+</head>
+<body>
+
+<div class="container">
+
+    <!-- NAVBAR -->
+    <div class="navbar">
+        <a href="#home">Home</a>
+        <a href="#sound">Sound</a>
+        <a href="#picture">Picture</a>
+        <a href="#space">Space</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+    </div>
+
+    <!-- HOME -->
+    <div id="home" class="section">
+        <h1>VanVeenIdentity</h1>
+        <p><strong>Sound · Picture · Space</strong></p>
+        <p>Crafting signature musical experiences that elevate artists, brands, and projects. Enhanced with visuals, spatial design, and bespoke creations for a fully immersive identity.</p>
+        <img src="images/DSC_0880.jpg" style="width:100%; border-radius:6px; margin-top:25px;">
+    </div>
+
+    <!-- SOUND -->
+    <div id="sound" class="section">
+        <h2>Sound</h2>
+        <p>Music Composition & Production
+Crafted to bring any vision to life, with rich, upscale timbres and balanced clarity. 
+            Specializing in lo-fi and jazzy tracks that melt into the background or set the perfect boutique atmosphere. Ideal for media, branding, or immersive experiences.
+</p>
+        <ul>
+            <li><iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/2vjNAxkUvIrgCDyXtBD9fy?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe></li>
+            <li><iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/1F8ubL4H0e4SNAZmH45jaf?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe></li>
+        </ul>
+    </div>
+
+    <!-- PICTURE -->
+    <div id="picture" class="section">
+        <h2>Picture</h2>
+        <p>Photography & Visual Content
+Capturing the essence of the creative process, from intimate studio moments to polished product and interior photography. 
+            Combining documentary storytelling with an artistic eye to produce images that feel authentic, atmospheric, and visually striking.</p>
+        <div class="gallery">
+            <img src="images/portrait.jpg" alt="Portrait">
+            <img src="images/product.jpg" alt="Product">
+            <img src="images/interior.jpg" alt="Interior">
+            <img src="images/lamp.jpg" alt="Lamp">
+            <img src="images/object.jpg" alt="Handmade Object">
+        </div>
+    </div>
+
+    <!-- SPACE -->
+    <div id="space" class="section">
+        <h2>Space</h2>
+        <p>Custom Spaces & Studio Design
+Bespoke solutions for functional and inspiring environments—pedalboards from reclaimed wood, custom acoustic panels, interior pillars, or complete studio builds. 
+            High-end materials like sheepswool ensure superior quality and acoustics, creating spaces that feel intentional, comfortable, and refined.</p>
+        <div class="gallery">
+            <img src="images/studio.jpg" alt="Studio Build">
+            <img src="images/pillars.jpg" alt="Interior Pillars">
+            <img src="images/pedalboard.jpg" alt="Pedalboard">
+        </div>
+    </div>
+
+    <!-- ABOUT -->
+    <div id="about" class="section">
+        <h2>About</h2>
+        <p>Tim van Veen is a sonic and visual storyteller based in Amsterdam, blending music, photography, and spatial design to craft cinematic atmospheres for boutique brands and bespoke projects. 
+            With a refined sense of aesthetics and a deep awareness of the audience’s experience, he translates a brand’s essence into every detail. 
+            Beyond concept and direction, Tim’s hands-on approach shapes the space in between—bringing ideas to life with precision, character, and atmosphere. </p>
+        <img src="images/DSC_0040.2.jpg" style="width:200px; border-radius:6px; margin-top:15px;">
+    </div>
+
+    <!-- CONTACT -->
+    <div id="contact" class="section contact-block">
+        <h2>Contact</h2>
+        <p><strong>Tim van Veen</strong><br>
+        Creative Director & Producer<br>
+        Amsterdam, NL<br>
+        <a href="mailto:contact@vanveenidentity.com">contact@vanveenidentity.com</a></p>
+    
+    </div>
+
+    <p class="footer">© 2025 VanVeenIdentity — Sound · Picture · Space</p>
+
+</div>
+
+</body>
+</html>
