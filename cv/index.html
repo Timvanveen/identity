@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tim van Veen — CV</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet">
+<style>
+/* ---------- GLOBAL ---------- */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+    background: #ffffff; /* wit achtergrond zoals VanVeenIdentity */
+    color: #1a1a1a; /* donkergrijs voor tekst */
+    line-height: 1.6;
+}
+
+a { text-decoration: none; color: #0077cc; font-weight: 600; }
+a:hover { opacity: 0.8; }
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 50px 25px;
+}
+
+/* ---------- HEADER ---------- */
+.header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.header h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 48px;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+}
+
+.header p {
+    font-size: 16px;
+    opacity: 0.8;
+    line-height: 1.4;
+}
+
+/* ---------- MAIN LAYOUT ---------- */
+.main {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+/* Left Column */
+.left-col {
+    flex: 1 1 250px;
+    max-width: 300px;
+}
+
+.left-col h3 {
+    font-family: 'Playfair Display', serif;
+    margin-bottom: 10px;
+    color: #0077cc; /* accentkleur van VanVeenIdentity */
+}
+
+.left-col ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.left-col li {
+    margin-bottom: 6px;
+    font-size: 14px;
+}
+
+/* Right Column */
+.right-col {
+    flex: 2 1 600px;
+}
+
+/* Section titles */
+.section-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    color: #0077cc; /* accentkleur */
+}
+
+/* QR code */
+.qr {
+    width: 100px;
+    height: 100px;
+    margin-top: 10px;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .main {
+        flex-direction: column;
+    }
+    .left-col, .right-col {
+        max-width: 100%;
+    }
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+
+    <!-- HEADER -->
+    <div class="header">
+        <h1>TIM VAN VEEN</h1>
+        <p><em>Creative Director – Sound & Visual Identity – Customer Experience – Interieur & Space Design</em></p>
+        <p>Amsterdam</p>
+    </div>
+
+    <!-- MAIN LAYOUT -->
+    <div class="main">
+
+        <!-- LEFT COLUMN -->
+        <div class="left-col">
+            <!-- CONTACT -->
+            <h3>CONTACT</h3>
+            <ul>
+                <li>📱 [telefoon]</li>
+                <li>✉️ [e-mail]</li>
+                <li>🔗 Portfolio: Scan QR</li>
+            </ul>
+            <img src="images/qr.png" alt="QR Code" class="qr">
+
+            <!-- VAARDIGHEDEN -->
+            <h3>VAARDIGHEDEN</h3>
+            <ul>
+                <li>Creative direction</li>
+                <li>Sound design & 432 Hz atmospheres</li>
+                <li>Visual storytelling</li>
+                <li>Klantbeleving (CX)</li>
+                <li>Interieurstyling & mood design</li>
+                <li>Kleur, sfeer, materiaalgevoel</li>
+                <li>Klus & technische uitvoering</li>
+                <li>Video editing / color grading (FCP)</li>
+                <li>Photoshop (basis)</li>
+                <li>Illustrator (basis)</li>
+            </ul>
+
+            <!-- TOOLS -->
+            <h3>TOOLS</h3>
+            <ul>
+                <li>Final Cut Pro</li>
+                <li>Adobe Photoshop</li>
+                <li>(lichte) Adobe Illustrator</li>
+                <li>Canva</li>
+                <li>Film-style presets</li>
+                <li>Analog grain editing</li>
+            </ul>
+
+            <!-- INTERESSES -->
+            <h3>INTERESSES</h3>
+            <ul>
+                <li>Mode</li>
+                <li>Interieur esthetiek</li>
+                <li>Vintage fotografie</li>
+                <li>Slow living</li>
+                <li>Biohacking</li>
+                <li>Natuurvoeding</li>
+                <li>Lofi & jazz</li>
+            </ul>
+        </div>
+
+        <!-- RIGHT COLUMN -->
+        <div class="right-col">
+            <!-- PROFIEL -->
+            <h3 class="section-title">PROFIEL</h3>
+            <p>
+                Ik creëer sound, visuals en sfeer voor merken, winkels en creatieve ruimtes.
+                Met een achtergrond in muziek (432 Hz, lofi, jazzy), vintage fotografie, interieur & klantbeleving help ik plekken een unieke vibe te geven — warm, rustig en esthetisch.
+            </p>
+            <p>
+                Ik combineer <strong>creative direction</strong> met <strong>hands-on ondersteuning</strong>: van soundscapes en visuele content tot praktische inrichting en klussen. Beschikbaar voor samenwerkingen van 2 dagen per week.
+            </p>
+
+            <!-- WAT IK OPLOS -->
+            <h3 class="section-title">WAT IK VOOR EEN MERK / WINKEL OPLOS</h3>
+            <p><strong>Sound identity</strong><br>
+            • 432 Hz ambient, lofi & jazzy instore muziek<br>
+            • Custom playlists en brand soundscapes</p>
+
+            <p><strong>Visual identity</strong><br>
+            • Vintage grain fotografie<br>
+            • Korte sfeer-video’s<br>
+            • Kleurgrading & mood content</p>
+
+            <p><strong>Customer experience</strong><br>
+            • Warme, rustige, stijlvolle beleving<br>
+            • Klanten helpen en service met karakter</p>
+
+            <p><strong>Interieur & space design</strong><br>
+            • Styling, flow, kleur, materiaalkeuze<br>
+            • Mogelijkheid tot samenwerking met stylist<br>
+            • Hands-on uitvoering: schilderen, opbouwen, kleine klussen</p>
+
+            <p><strong>Hands-on support</strong><br>
+            • Verkoop, vloerwerk, winkelpresentatie<br>
+            • Helpen met dagelijkse taken en sfeerbewaking</p>
+
+            <!-- ERVARING -->
+            <h3 class="section-title">ERVARING</h3>
+            <p><strong>Creative Director & Producer (Freelance)</strong><br>
+            xxxx – heden<br>
+            – Sound identity, muziekproductie 432 Hz / lofi / jazz<br>
+            – Visuele mood content<br>
+            – Korte video’s & kleurgrading<br>
+            – Branding & sfeercreatie</p>
+
+            <p><strong>Studio Owner / Music Composer</strong><br>
+            xxxx – heden<br>
+            – Muziek voor sync, library en achtergrond<br>
+            – Artistieke releases<br>
+            – Creative direction in sound</p>
+
+            <p><strong>Fotografie & Video (Freelance)</strong><br>
+            xxxx – heden<br>
+            – Film-look fotografie<br>
+            – Korte mood-video’s<br>
+            – Postproduction & color grading</p>
+
+            <p><strong>Interieur & Kluswerk (met stylist)</strong><br>
+            xxxx – heden<br>
+            – Styling & inrichting<br>
+            – Kleine bouw/uitvoer<br>
+            – Materialen, kleuren, flow</p>
+
+            <p><strong>Assistent aannemer (sporadisch)</strong><br>
+            – Montage, reparaties, schilderen<br>
+            – Praktisch & oplossingsgericht</p>
+
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>
