@@ -9,6 +9,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet">
 
 <style>
+/* ---------- BASE ---------- */
 body {
     margin: 0;
     padding: 0;
@@ -18,8 +19,11 @@ body {
     line-height: 1.6;
 }
 
-a { text-decoration: none; color: #111; font-weight: 600; }
-a:hover { opacity: 0.7; }
+a {
+    text-decoration: none;
+    color: #111;
+    font-weight: 600;
+}
 
 .container {
     max-width: 900px;
@@ -27,7 +31,7 @@ a:hover { opacity: 0.7; }
     padding: 50px 25px;
 }
 
-/* HEADER */
+/* ---------- HEADER ---------- */
 .header {
     text-align: center;
     margin-bottom: 60px;
@@ -42,60 +46,77 @@ a:hover { opacity: 0.7; }
 .header p {
     font-size: 16px;
     opacity: 0.8;
-    line-height: 1.4;
+    margin: 4px 0;
 }
 
-/* MAIN LAYOUT */
+/* ---------- LAYOUT ---------- */
 .main {
     display: flex;
-    flex-wrap: wrap;
     gap: 40px;
+    align-items: flex-start;
 }
 
-/* LEFT COLUMN */
 .left-col {
-    flex: 1 1 250px;
-    max-width: 300px;
+    width: 280px;
+    flex-shrink: 0;
 }
 
+.right-col {
+    flex: 1;
+}
+
+/* ---------- LEFT COLUMN ---------- */
 .left-col h3 {
     font-family: 'Playfair Display', serif;
-    margin-bottom: 10px;
-    color: #111;
+    font-size: 20px;
+    margin: 30px 0 10px;
 }
 
 .left-col ul {
     list-style: none;
-    padding-left: 0;
-    margin-bottom: 20px;
+    padding: 0;
+    margin: 0 0 20px;
 }
 
 .left-col li {
-    margin-bottom: 6px;
     font-size: 14px;
+    margin-bottom: 6px;
 }
 
-/* RIGHT COLUMN */
-.right-col {
-    flex: 2 1 600px;
-}
-
-/* Section titles */
+/* ---------- RIGHT COLUMN ---------- */
 .section-title {
     font-family: 'Playfair Display', serif;
-    font-size: 24px;
-    margin-top: 30px;
-    margin-bottom: 10px;
-    color: #111;
+    font-size: 26px;
+    margin: 40px 0 10px;
 }
 
-/* Responsive */
-@media (max-width: 900px) {
-    .main {
-        flex-direction: column;
+.right-col p {
+    margin-bottom: 14px;
+}
+
+/* ---------- PRINT STYLES ---------- */
+@media print {
+    body {
+        background: #ffffff;
     }
-    .left-col, .right-col {
-        max-width: 100%;
+
+    .container {
+        padding: 40px;
+    }
+
+    .main {
+        display: flex;
+        flex-wrap: nowrap;
+        gap: 30px;
+    }
+
+    .left-col {
+        width: 260px;
+    }
+
+    h1, h3, p, ul {
+        break-inside: avoid;
+        page-break-inside: avoid;
     }
 }
 </style>
@@ -108,7 +129,8 @@ a:hover { opacity: 0.7; }
     <!-- HEADER -->
     <div class="header">
         <h1>TIM VAN VEEN</h1>
-        <p><em>Music Producer – Creative Director<br>Working with sound, visuals and space</em></p>
+        <p><em>Music Producer – Creative Director</em></p>
+        <p><em>Working with sound, visuals and space</em></p>
         <p>Amsterdam</p>
     </div>
 
@@ -118,30 +140,26 @@ a:hover { opacity: 0.7; }
         <!-- LEFT COLUMN -->
         <div class="left-col">
 
-            <!-- CONTACT -->
             <h3>CONTACT</h3>
             <ul>
                 <li>📱 <a href="tel:+31621506660">+31 6 21506660</a></li>
                 <li>✉️ <a href="mailto:tim@vanveenidentity.com">tim@vanveenidentity.com</a></li>
-                <li>🔗 <a href="https://www.vanveenidentity.com" target="_blank">www.vanveenidentity.com</a></li>
+                <li>🔗 <a href="https://www.vanveenidentity.com">vanveenidentity.com</a></li>
             </ul>
 
-            <!-- SKILLS -->
             <h3>SKILLS</h3>
             <ul>
+                
+                <li>Music composition & production</li>
                 <li>Creative direction</li>
-                <li>Music production & sound design</li>
                 <li>Visual storytelling</li>
                 <li>Customer experience & atmosphere</li>
                 <li>Interior styling & mood design</li>
-                <li>Color, material & spatial sense</li>
-                <li>Hands-on execution & technical work</li>
-                <li>Video editing & color grading (FCP)</li>
-                <li>Photoshop (basic)</li>
-                <li>Illustrator (basic)</li>
+                <li>Material & spatial sense</li>
+                <li>Hands-on execution</li>
+                <li>Video editing & color grading</li>
             </ul>
 
-            <!-- TOOLS -->
             <h3>TOOLS</h3>
             <ul>
                 <li>Ableton Live</li>
@@ -151,7 +169,6 @@ a:hover { opacity: 0.7; }
                 <li>Adobe Illustrator</li>
             </ul>
 
-            <!-- EDUCATION -->
             <h3>EDUCATION</h3>
             <ul>
                 <li>
@@ -165,7 +182,6 @@ a:hover { opacity: 0.7; }
                 </li>
             </ul>
 
-            <!-- INTERESTS -->
             <h3>INTERESTS</h3>
             <ul>
                 <li>Fashion</li>
@@ -181,77 +197,63 @@ a:hover { opacity: 0.7; }
         <!-- RIGHT COLUMN -->
         <div class="right-col">
 
-            <!-- PROFILE -->
             <h3 class="section-title">PROFILE</h3>
             <p>
-                I create sound, visuals and atmosphere for artists, brands, stores and creative spaces.
-                With a background in music, photography and interior experience, I help develop a unique, calm and intentional identity.
+                I create sound, visuals and atmosphere for brands, stores and creative spaces.
+                My work focuses on calm, intentional identities that feel warm, refined and human.
             </p>
             <p>
-                I combine <strong>creative direction</strong> with <strong>hands-on support</strong> — from soundscapes and visual content to practical interior work and daily presence on the floor.
+                I combine <strong>creative direction</strong> with <strong>hands-on presence</strong> —
+                from sound and visual content to practical execution and daily floor support.
             </p>
 
-            <!-- WHAT I SOLVE -->
-            <h3 class="section-title">WHAT I SOLVE FOR A BRAND / STORE</h3>
+            <h3 class="section-title">WHAT I BRING TO A STORE / BRAND</h3>
 
             <p><strong>Sound identity</strong><br>
-            • Custom sound logos and music<br>
-            • Playlists and brand soundscapes</p>
+            Custom music, sound design and sonic atmosphere</p>
 
             <p><strong>Visual identity</strong><br>
-            • Photography with a film-like aesthetic<br>
-            • Short-form mood videos<br>
-            • Color grading & visual tone</p>
+            Photography, short-form video and mood-driven visuals</p>
 
             <p><strong>Customer experience</strong><br>
-            • Calm, welcoming atmosphere<br>
-            • Attentive service with character</p>
+            Calm, attentive service and atmosphere awareness</p>
 
             <p><strong>Interior & space</strong><br>
-            • Styling, flow, materials and color<br>
-            • Acoustics and spatial experience<br>
-            • Hands-on execution and build</p>
+            Styling, flow, materials, acoustics and execution</p>
 
             <p><strong>Hands-on support</strong><br>
-            • Sales & floor presence<br>
-            • Presentation & atmosphere monitoring</p>
+            Sales, presentation and presence</p>
 
-            <!-- EXPERIENCE -->
             <h3 class="section-title">EXPERIENCE</h3>
-
-            <p><strong>Creative Director & Music Producer</strong><br>
-            2024 – present<br>
-            – Sound identity & music production<br>
-            – Visual mood content & short films<br>
-            – Branding & atmosphere creation</p>
-
-            <p><strong>Studio Owner / Composer</strong><br>
+            
+            <p><strong>Music Producer / Composer</strong><br>
             2013 – present<br>
-            – Music for sync, library & artists<br>
-            – Artistic releases<br>
-            – Creative direction in sound</p>
+            Music for sync, library and artists</p>                                                                                   
+
+            <p><strong>Recording Studio</strong><br>
+            2013 – present<br>
+            In-house music producer, recording, mixing, mastering</p>
+            
+            <p><strong>Creative Director</strong><br>
+            2024 – present<br>
+            Sound identity, music production, visual content, atmosphere creation</p>
 
             <p><strong>Photography & Video</strong><br>
             2021 – present<br>
-            – Film-inspired photography<br>
-            – Mood-driven short videos<br>
-            – Postproduction & grading</p>
+            Film-inspired imagery and mood videos</p>
 
             <p><strong>Interior & Design</strong><br>
             2018 – present<br>
-            – Styling & interior setup<br>
-            – Small construction & execution<br>
-            – Material and spatial flow</p>
+            Styling, construction and spatial setup</p>
 
             <p><strong>Assistant Contractor</strong><br>
             2010 – present<br>
-            – Assembly, repairs & construction<br>
-            – Practical, solution-oriented support</p>
+            Practical construction and problem-solving</p>
 
         </div>
-
     </div>
 </div>
 
 </body>
 </html>
+
