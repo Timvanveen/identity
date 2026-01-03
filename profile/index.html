@@ -73,8 +73,12 @@ a {
     flex-shrink: 0;
 }
 
-.right-col {
-    flex: 1;
+/* ---------- PORTRET FOTO ---------- */
+.left-col .portrait {
+    width: 100px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    display: block;
 }
 
 /* ---------- LEFT COLUMN ---------- */
@@ -96,6 +100,10 @@ a {
 }
 
 /* ---------- RIGHT COLUMN ---------- */
+.right-col {
+    flex: 1;
+}
+
 .section-title {
     font-family: 'Playfair Display', serif;
     font-size: 26px;
@@ -126,7 +134,7 @@ a {
         width: 260px;
     }
 
-    h1, h3, p, ul {
+    h1, h3, p, ul, img {
         break-inside: avoid;
         page-break-inside: avoid;
     }
@@ -151,6 +159,9 @@ a {
 
         <!-- LEFT COLUMN -->
         <div class="left-col">
+
+            <!-- PORTRET FOTO -->
+            <img src="images/portrait.jpg" alt="Tim van Veen" class="portrait">
 
             <h3>CONTACT</h3>
             <ul>
@@ -265,3 +276,4 @@ a {
 
 </body>
 </html>
+
