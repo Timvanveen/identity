@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>Tim van Veen — Profile</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet">
+
+<style>
+/* ---------- BASE ---------- */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+    background: #f6f4f1;
+    color: #1c1c1c;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: #111;
+    font-weight: 600;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 50px 25px;
+}
+
+/* ---------- HEADER ---------- */
+.header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.header h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 72px;
+    margin-bottom: 10px;
+}
+
+.header .titles {
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 18px;
+    color: #111;
+    margin-bottom: 5px;
+}
+
+.header .subtext {
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    color: #111;
+    line-height: 1.4;
+    letter-spacing: 0.5px;
+    margin-bottom: 10px;
+}
+
+/* ---------- LAYOUT ---------- */
+.main {
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+}
+
+.left-col {
+    width: 280px;
+    flex-shrink: 0;
+}
+
+/* ---------- PORTRET FOTO ---------- */
+.left-col .portrait {
+    width: 100px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    display: block;
+}
+
+/* ---------- LEFT COLUMN ---------- */
+.left-col h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 20px;
+    margin: 30px 0 10px;
+}
+
+.left-col ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 20px;
+}
+
+.left-col li {
+    font-size: 14px;
+    margin-bottom: 6px;
+}
+
+/* ---------- RIGHT COLUMN ---------- */
+.right-col {
+    flex: 1;
+}
+
+.section-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 26px;
+    margin: 40px 0 10px;
+}
+
+.right-col p {
+    margin-bottom: 14px;
+}
+
+/* ---------- PRINT STYLES ---------- */
+@media print {
+    body {
+        background: #ffffff;
+    }
+
+    .container {
+        padding: 40px;
+    }
+
+    .main {
+        display: flex;
+        flex-wrap: nowrap;
+        gap: 30px;
+    }
+
+    .left-col {
+        width: 260px;
+    }
+
+    h1, h3, p, ul, img {
+        break-inside: avoid;
+        page-break-inside: avoid;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- HEADER -->
+    <div class="header">
+        <h1>TIM VAN VEEN</h1>
+        <p class="titles">Music Producer – Creative Director</p>
+        <p class="subtext">Crafting experiences working with sound, visuals and space</p>
+        <p>Amsterdam</p>
+    </div>
+
+    <!-- MAIN -->
+    <div class="main">
+
+        <!-- LEFT COLUMN -->
+        <div class="left-col">
+
+            <!-- PORTRET FOTO -->
+            <img src="images/portrait.jpg" class="portrait">
+
+            <h3>CONTACT</h3>
+            <ul>
+                <li>📱 <a href="tel:+31621506660">+31 6 21506660</a></li>
+                <li>✉️ <a href="mailto:tim@vanveenidentity.com">tim@vanveenidentity.com</a></li>
+                <li>🔗 <a href="https://www.vanveenidentity.com">vanveenidentity.com</a></li>
+            </ul>
+
+            <h3>SKILLS</h3>
+            <ul>
+                <li>Music composition & production</li>
+                <li>Creative direction</li>
+                <li>Visual storytelling</li>
+                <li>Customer experience & atmosphere</li>
+                <li>Interior styling & mood design</li>
+                <li>Material & spatial sense</li>
+                <li>Hands-on execution</li>
+                <li>Editing & color grading</li>
+            </ul>
+
+            <h3>TOOLS</h3>
+            <ul>
+                <li>Ableton Live</li>
+                <li>Avid Pro Tools</li>
+                <li>Final Cut Pro</li>
+                <li>Adobe Photoshop</li>
+                <li>Adobe Illustrator</li>
+            </ul>
+
+            <h3>EDUCATION</h3>
+            <ul>
+                <li>
+                    <strong>Bachelor of Music (Hons)</strong><br>
+                    Music Composition and Production, Utrecht University of Arts (HKU)
+                </li>
+                <li>
+                    <strong>Music Production Course</strong><br>
+                    LOI
+                </li>
+            </ul>
+
+            <h3>INTERESTS</h3>
+            <ul>
+                <li>Fashion</li>
+                <li>Interior aesthetics</li>
+                <li>Design & materials</li>
+                <li>Photography & film</li>
+                <li>Sound & atmosphere</li>
+                <li>Lofi & jazz</li>
+            </ul>
+
+        </div>
+
+        <!-- RIGHT COLUMN -->
+        <div class="right-col">
+
+            <h3 class="section-title">PROFILE</h3>
+            <p>
+            I work with sound, visuals and space to create immersive, intentional experiences.
+            My background spans music production, visual storytelling and spatial design.
+            </p>
+            <p>
+            I combine creative direction with hands-on presence, focusing on atmosphere, detail and the way people experience a space or moment.
+            </p>
+            
+            <h3 class="section-title">WHAT I CAN BRING</h3>
+
+            <p><strong>Sound identity</strong><br>
+            Custom music, sound design and sonic atmosphere</p>
+
+            <p><strong>Visual identity</strong><br>
+            Photography, short-form video and mood-driven visuals</p>
+
+            <p><strong>Customer experience</strong><br>
+            Calm, attentive service and atmosphere awareness</p>
+
+            <p><strong>Interior & space</strong><br>
+            Styling, flow, materials, acoustics and execution</p>
+
+            <p><strong>Hands-on support</strong><br>
+            Sales, presentation and presence</p>
+
+            <h3 class="section-title">EXPERIENCE</h3>
+            
+            <p><strong>Creative Director</strong><br>
+            2024 – present<br>
+            Sound identity, music production, visual content, atmosphere creation</p>
+
+            <p><strong>Music Producer / Composer</strong><br>
+            2013 – present<br>
+            Music for sync, library and artists</p>                                                                                   
+
+            <p><strong>Recording Studio</strong><br>
+            2013 – present<br>
+            Studio operations, production, recording, mixing and mastering</p>
+            
+            <p><strong>Photography & Video</strong><br>
+            2021 – present<br>
+            Film-inspired imagery, mood videos and performance documentation</p>
+
+            <p><strong>Interior & Design</strong><br>
+            2018 – present<br>
+            Styling, spatial setup and handcrafted objects</p>
+
+            <p><strong>Assistant Contractor</strong><br>
+            2010 – present<br>
+            Practical construction and problem-solving</p>
+
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
